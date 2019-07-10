@@ -1,7 +1,7 @@
 package configuration;
 
 import pageObjects.AbstractBasePage;
-import pageObjects.HomePage;
+import pageObjects.sapientWebsite.HomePage;
 import pageObjects.PageProvider;
 import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;

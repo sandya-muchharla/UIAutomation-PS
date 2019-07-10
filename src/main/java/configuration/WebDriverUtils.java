@@ -26,6 +26,6 @@ public class WebDriverUtils {
     }
 
     public static WebElement waitUntilClickable(WebDriver driver, By by, Duration wait) {
-        return new WebDriverWait(driver, wait.getSeconds()).until(ExpectedConditions.elementToBeClickable(by));
+        return new WebDriverWait(driver, wait).until(ExpectedConditions.elementToBeClickable(by));
     }
 }

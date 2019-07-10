@@ -1,9 +1,10 @@
-package pageObjects;
+package pageObjects.sapientWebsite;
 
 import cucumberDatatableMapping.OfficeLocationParameters;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import pageObjects.AbstractBasePage;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -35,22 +36,20 @@ public class ContactPage extends AbstractBasePage {
         switch(region){
             case AMERICAS:
                 waitUntilClickable(TAB_NAME_AMERICAS).click();
-                scrollToElement(TAB_CONTENTS_AMERICAS);
                 officeLocationList = getOfficeLocations(driver.findElement(TAB_CONTENTS_AMERICAS));
                 break;
             case APAC:
                 waitUntilClickable(TAB_NAME_APAC).click();
-                scrollToElement(TAB_CONTENTS_APAC);
                 officeLocationList = getOfficeLocations(driver.findElement(TAB_CONTENTS_APAC));
                 break;
             case EMEA:
                 waitUntilClickable(TAB_NAME_EMEA).click();
-                scrollToElement(TAB_NAME_EMEA);
                 officeLocationList = getOfficeLocations(driver.findElement(TAB_CONTENTS_EMEA));
                 break;
         }
         return officeLocationList;
     }
+
     private List<OfficeLocationParameters> getOfficeLocations(WebElement tabName) {
         return tabName.findElements(OFFICE_LOCATIONS_LIST).stream()
                 .map(webElement -> new OfficeLocation(driver, webElement))

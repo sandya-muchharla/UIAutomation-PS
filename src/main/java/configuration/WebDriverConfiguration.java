@@ -52,7 +52,7 @@ public class WebDriverConfiguration {
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200", "--disable-extensions", "--disable-dev-shm-usage");
 
-        DesiredCapabilities cap = DesiredCapabilities.chrome();
+        DesiredCapabilities cap = DesiredCapabilities.htmlUnit();
         cap.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
         cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
         cap.setCapability("acceptInsecureCerts", true);

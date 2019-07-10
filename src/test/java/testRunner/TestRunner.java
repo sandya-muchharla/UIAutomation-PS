@@ -1,16 +1,17 @@
 package testRunner;
 
-import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
-import org.junit.runner.RunWith;
 
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 
 @CucumberOptions(monochrome = true,
+        plugin = {"progress", "html:target/cucumber"},
         features = "src/test/java/features/",
-        glue = "stepDefinitions",
-        tags = "@careers")
+        glue = {"stepDefinitions", "dataTableConfig", "cucumberDatatableMapping"},
+        tags = "@Contact")
 
 public class TestRunner {
 }

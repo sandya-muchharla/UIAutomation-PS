@@ -1,5 +1,5 @@
-@careers
-Feature: Careers
+@Contact
+Feature: Contact
 
   @Scenario1
   Scenario: Careers selection

@@ -16,7 +16,6 @@ public class OfficeLocationParameters {
         this.phoneNumber = phoneNumber;
     }
 
-
     @Override
     public boolean equals(Object o){
         return EqualsBuilder.reflectionEquals(o, this);
