@@ -12,6 +12,7 @@ To be added..
 -ea
 -Dbrowser.name=chrome
 -Dplatform=mac
+-Dbase.url=https://www.publicissapient.com
 ```
 
 **Executing tests**

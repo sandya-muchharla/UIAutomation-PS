@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         plugin = {"progress", "html:target/cucumber"},
         features = "src/test/java/features/",
         glue = {"stepDefinitions", "dataTableConfig", "cucumberDatatableMapping"},
-        tags = "@Contact")
+        tags = "@LloydsBank")
 
 public class TestRunner {
 }

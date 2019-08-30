@@ -8,7 +8,9 @@ import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.assertj.core.api.Assertions;
+import pageObjects.lloydsBank.LlloydsHomePage;
 import pageObjects.sapientWebsite.ContactPage;
 import pageObjects.sapientWebsite.HomePage;
 
@@ -17,7 +19,7 @@ import java.util.List;
 public class CommonStepDefinitions {
 
     private PageNavigator navigator;
-    private HomePage homePage;
+    private LlloydsHomePage homePage;
     private ContactPage contactPage;
 
     @Before
@@ -30,20 +32,25 @@ public class CommonStepDefinitions {
         homePage = navigator.launchApplication();
     }
 
-    @And("^I open the menu item (.*)$")
-    public void iOpenTheMenuItemContact(String menuName) {
-        contactPage = homePage.selectMenuItem(menuName);
+    @When("I click the apply now button")
+    public void iClickTheApplyNowButton() {
+        homePage.applyNow();
     }
 
-    @And("^I navigate to Contact page from the main menu$")
-    public void iNavigateToContactPageFromTheMainMenu() {
-        contactPage = homePage.selectMenuItem("Contact");
-    }
+//    @And("^I open the menu item (.*)$")
+//    public void iOpenTheMenuItemContact(String menuName) {
+//        contactPage = homePage.selectMenuItem(menuName);
+//    }
+//
+//    @And("^I navigate to Contact page from the main menu$")
+//    public void iNavigateToContactPageFromTheMainMenu() {
+//        contactPage = homePage.selectMenuItem("Contact");
+//    }
 
-    @Then("^I see the following office locations for the region (.*)$")
-    public void iSeeTheFollowingOfficeLocationsForTheRegion(String region, DataTable expectedOfficeLocationsDatatable) {
-        List<OfficeLocationParameters> expectedOfficeLocationsList = expectedOfficeLocationsDatatable.asList(OfficeLocationParameters.class);
-        List<OfficeLocationParameters> actualOfficeLocationsList = contactPage.getOfficeLocationsForRegion(ContactPage.Regions.valueOf(region));
-        Assertions.assertThat(actualOfficeLocationsList).containsExactlyInAnyOrderElementsOf(expectedOfficeLocationsList);
-    }
+//    @Then("^I see the following office locations for the region (.*)$")
+//    public void iSeeTheFollowingOfficeLocationsForTheRegion(String region, DataTable expectedOfficeLocationsDatatable) {
+//        List<OfficeLocationParameters> expectedOfficeLocationsList = expectedOfficeLocationsDatatable.asList(OfficeLocationParameters.class);
+//        List<OfficeLocationParameters> actualOfficeLocationsList = contactPage.getOfficeLocationsForRegion(ContactPage.Regions.valueOf(region));
+//        Assertions.assertThat(actualOfficeLocationsList).containsExactlyInAnyOrderElementsOf(expectedOfficeLocationsList);
+//    }
 }

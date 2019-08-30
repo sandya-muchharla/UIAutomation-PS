@@ -7,7 +7,7 @@ Feature: Contact
     When I navigate to Contact page from the main menu
     Then I see the following office locations for the region AMERICAS
       | City            | Address                                                     | Phone Number    |
-      | Atlanta         | 3340 Peachtree Rd NE  Suite 2400,  Atlanta, GA 30326        | +1-770-407-3400 |
+      | Atlanta         | 384 Northyards Blvd NW  Suite 300 Atlanta, GA 30313         | +1-770-407-3400 |
       | Austin          | 300 West Sixth Street,  Suite 1600  Austin, TX 78701        | +1-512-532-2000 |
       | Boston          | 40 Water Street  Boston, MA 02109                           | +1-617-621-0200 |
       | Boulder         | 1845 Folsom Street,  Boulder, CO 80302                      | +1-720-383-4276 |
@@ -22,7 +22,7 @@ Feature: Contact
       | Irvine          | 18300 Von Karman Avenue,  Suite 700,  Irvine, CA 92612      | +1-949-404-2900 |
       | Los Angeles     | 2301 Rosecrans Avenue,  Suite 5100  El Segundo, CA 90245    | +1-310-343-6111 |
       | Miami           | 2911 Grand Avenue,  Suite 100B  Miami, FL 33133             | +1-305-253-0100 |
-      | Minneapolis     | 901 Marquette Avenue,  Floor 24  Minneapolis, MN 55402      | +1-612-547-0950 |
+      | Minneapolis     | 121 N Washington Ave Minneapolis, MN 55401                  | +1-612-547-0950 |
       | New York        | 375 Hudson Street,  9th Floor  New York, NY 10014           | +1-212-798-6600 |
       | Portland        | 1330 NW 14th Avenue,  Portland, OR 97209                    | +1-503-444-3795 |
       | San Francisco   | 350 Bush Street,  Floor 17  San Francisco, CA 94104         | +1-415-369-6300 |
@@ -38,7 +38,7 @@ Feature: Contact
       | Gurgaon   | Sapient Consulting Pvt. Ltd.,  Candor Techspace, Tower - A,  Building no. 2, Sector 21,  Old Delhi-Gurgaon Road,  Dundahera, Gurgaon - 122016 Haryana, India                              | +91-124-389-3128  |
       | Hong Kong | 22/F Chinachem Exchange Square,  1 Hoi Wan Street,  Quarry Bay, Hong Kong                                                                                                                 | +852-3102-4512    |
       | Jakarta   | Jl. DR. Ide Anak Agung Gde Agung,  RT.1/RW.2, RT.5/RW.2,  Kuningan, East Kuningan,  Setiabudi, South Jakarta City,  Jakarta 12950, Indonesia                                              | +62-21-5081-5501  |
-      | Melbourne | Level 7, 28 Freshwater Place,  Southbank, Melobourne VIC 3006, Australia                                                                                                                  | +03-9946-3300     |
+      | Melbourne | Level 7, 28 Freshwater Place,  Southbank, Melbourne VIC 3006, Australia                                                                                                                  | +03-9946-3300     |
       | Mumbai    | Sapient Consulting Pvt. Ltd.,  R-Tech Park, Goregaon(E),  13th Floor, Building 2,  Off Western Express Highway,  Mumbai, Maharashtra - 400063, India                                      | +91-022-3300-0600 |
       | Noida     | Sapient Consulting Pvt. Ltd.,  Tower C, Ground Floor to 4th Floor,  IT/ ITES SEZ, Plot No. 7,  Sector -144, Noida,  Distt. G. B. Nagar (U.P.), India                                      | +91-120-479-5000  |
       | Shanghai  | 19/F, Henderson 688 Plaza,  No. 688 West Nanjing Road,  Jingan District,  Shanghai, China 200041                                                                                          | +86-21-6193-1600  |

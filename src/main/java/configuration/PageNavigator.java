@@ -1,6 +1,7 @@
 package configuration;
 
 import pageObjects.AbstractBasePage;
+import pageObjects.lloydsBank.LlloydsHomePage;
 import pageObjects.sapientWebsite.HomePage;
 import pageObjects.PageProvider;
 import org.openqa.selenium.WebDriver;
@@ -17,10 +18,10 @@ public class PageNavigator {
         this.driver = new WebDriverConfiguration().intializeDriver();
     }
 
-    public HomePage launchApplication(){
+    public LlloydsHomePage launchApplication(){
         driver.get(System.getProperty("base.url"));
         LOGGER.info("Launching application with url: " + System.getProperty("base.url"));
-        return new HomePage(driver);
+        return new LlloydsHomePage(driver);
     }
 
     public void closeBrowser(){
