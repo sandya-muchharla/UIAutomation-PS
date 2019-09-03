@@ -33,5 +33,5 @@ public class PageNavigator {
         driver.get(System.getProperty("base.url") + "/" + url);
         return pageProvider.getPage(driver);
     }
-    
+
 }
